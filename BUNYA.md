@@ -40,7 +40,7 @@ sinfo
 ```
 scancel job_id 
 ```
-## Time your job 
+## Time your job in your slurm script
 ```
 res1=$(date +%s.%N)
 
