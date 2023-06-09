@@ -43,7 +43,9 @@ scancel job_id
 ## Time your job 
 ```
 res1=$(date +%s.%N)
+
 Actual job execution 
+
 res2=$(date +%s.%N)
 
 dt=$(echo "$res2 - $res1" | bc)
