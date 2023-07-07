@@ -58,3 +58,7 @@ ds=$(echo "$dt3-60*$dm" | bc)
 
 LC_NUMERIC=C printf "Total runtime: %d:%02d:%02d:%02.4f\n" $dd $dh $dm $ds
 ```
+
+## SIGMOD
+
+
