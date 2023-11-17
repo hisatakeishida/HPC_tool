@@ -27,8 +27,10 @@ ls -lh /scratch/project
 ## view info about jobs (kind of qstat) 
 ```
 squeue --account group_account_name
+squeue --me
 squeue --jobs job_id
 squeue --users user_id
+squeue --users s4573340 -o "%12i %7q %.9P %.20j %.10u %.2t %.11M %.4D %.4C %.14b %8m %16R %18p %10B %.10L" | sort
 ```
 
 ## view info about all partition (general, ai, etc) 
@@ -40,6 +42,12 @@ sinfo
 ```
 scancel job_id 
 ```
+
+## Reduce walltime (cant increase unless sudo access)
+```
+scontrol update  jobid=6199891 TimeLimit=24:00:00
+```
+
 ## Time your job in your slurm script
 ```
 res1=$(date +%s.%N)
